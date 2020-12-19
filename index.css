@@ -6,8 +6,7 @@ deep gray: #464c4c
 warm umber (text): rgba(70,76,76,.7);
 soft pink: #EB90B0, #c2869b;
 gold: #F6BD60, #deae5f;
-purple: #6B63B5;
-#8681b5
+purple: #6B63B5, #8681b5;
 green: #84A59D;
 */
 
@@ -53,8 +52,7 @@ body {
   background-size:cover;
   background-color: rgba(246,189,96, 1);
 }
-/* 246,189,96, .8 */
-/* 222, 174, 95 */
+
 #overlay {
   height: auto;
   position: absolute;
@@ -70,7 +68,7 @@ body {
   font-size: 3em;
   font-weight: 500;
   color: #F6BD60;
-  box-shadow: 10px 10px gray;
+  box-shadow: 10px 10px rgba(128,128,128, .8);
   padding: 7px 10px;
   animation: wiggle 2.5s infinite;
 }
@@ -170,8 +168,6 @@ h3 {
   background-color: transparent;
   width: 300px;
   height: 250px;
-  /* border: 1px solid #f1f1f1; */
-  /* box-shadow: inset 10px 10px grey; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   margin: auto;
   margin-bottom: 40px;
