@@ -1,0 +1,324 @@
+/* https://www.fontspring.com/lic/e2fjm5vyjw   - Museo 300*/ 
+/* Colors: 
+cream: #f4f0df
+very light: #f2f2f0
+deep gray: #464c4c
+warm umber (text): rgba(70,76,76,.7);
+soft pink: #EB90B0, #c2869b;
+gold: #F6BD60, #deae5f;
+purple: #6B63B5;
+#8681b5
+green: #84A59D;
+*/
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 80% { transform: rotate(0deg); }
+ 85% { transform: rotate(5deg); }
+ 95% { transform: rotate(-5deg); }
+100% { transform: rotate(0deg); }
+}
+
+body {
+  /* background-color: #F7EDE2; */
+  background-color: #f2f2f0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+.anchor {
+  padding-top: 40px;
+}
+
+#customNav {
+  background-color: #f2f2f0;
+  font-family: 'Quicksand', sans-serif;
+  top: 0;
+  position:fixed;
+  z-index: 2;
+}
+
+#customNav a:hover {
+  font-weight: 500;
+  /* transform:rotate(5deg); */
+}
+.navbar-brand a:hover {
+  transform:rotate(0deg);
+}
+
+#landing {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(222, 174, 95, .8), rgba(222, 174, 95, .8),rgba(242, 242, 240, 1)), url("./assets/bookshelf2.jpg");
+  background-size:cover;
+  background-color: rgba(246,189,96, 1);
+}
+/* 246,189,96, .8 */
+/* 222, 174, 95 */
+#overlay {
+  height: auto;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  background-color: #f2f2f0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  font-size: 3em;
+  font-weight: 500;
+  color: #F6BD60;
+  box-shadow: 10px 10px gray;
+  padding: 7px 10px;
+  animation: wiggle 2.5s infinite;
+}
+
+#aboutMeWrapper {
+  background-color: #f2f2f0;
+  width: 90%;
+  /* min-height: 100vh; */
+  height: auto;
+  margin: auto;
+  /* padding-top: 20vh; */
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+#portrait img {
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
+  box-shadow: 10px 10px grey;
+  margin: auto;
+  display: block;
+  transform: rotate(-.8deg);
+  background-color: grey;
+  margin-bottom: 30px;
+}
+
+#portrait {
+  height: auto;
+}
+
+#aboutMe {
+  background: url(./assets/telegraph-square.jpg);
+  background-color: #EB90B0;
+  background-repeat: repeat;
+  /* color: #5B4B49; */
+  color: rgba(70,76,76,.7);
+  font-family: 'Antic Slab', serif;
+  /* width: 90%;
+  max-width: 800px; */
+  height: auto;
+  margin: auto;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 10px 10px grey;
+  transform: rotate(.5deg);
+}
+
+#aboutMe p {
+  transform: rotate(-1.5deg);
+}
+
+hr {
+  color: #EB90B0;
+  width: 60%;
+  margin: auto;
+  /* border-top: 5px solid #EB90B0; */
+  height: 10px;
+  /* margin-bottom: 20px; */
+  background-color: #EB90B0; 
+}
+
+.container-lg {
+  margin: auto;
+}
+
+#aboutMeWrapper .row {
+  margin-top:20px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.col mx-auto {
+  height: auto;
+}
+
+h3 {
+  text-align: left;
+}
+
+#projects {
+  padding-bottom: 10vh;
+}
+
+#projects h2 {
+  text-align: center;
+  color: #deae5f;
+  padding: 15px 0px;
+  text-shadow: 3px 3px lightgray;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 250px;
+  /* border: 1px solid #f1f1f1; */
+  /* box-shadow: inset 10px 10px grey; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  box-shadow: 10px 10px gray;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  /* background: url("./assets/pokemonParty.png"); */
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: gray;
+  background: linear-gradient( rgba(200,200,200, .3),rgba(200, 200, 200, .3)), url("./assets/blackpaper.jpg");
+  color: rgba(255,255,255, .8);
+  transform: rotateY(180deg);
+  font-size: 14px;
+  line-height: 1.1;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  text-align: justify;
+  
+}
+
+#one {
+  transform: rotate(1deg);
+}
+#one .flip-card-front, #one .flip-card-back {
+  box-shadow: 10px 10px #deae5f;
+}
+#two {
+  transform: rotate(-.2deg);
+}
+#two .flip-card-front, #two .flip-card-back {
+  box-shadow: 10px 10px #8681b5;
+}
+#three {
+  transform: rotate(-1deg);
+}
+#three .flip-card-front, #three .flip-card-back {
+  box-shadow: 10px 10px #84A59D;
+}
+#four {
+  transform: rotate(-.4deg);
+  font-size: .9em;
+} 
+#four .flip-card-front, #four .flip-card-back {
+  box-shadow: 10px 10px #84A59D;
+  background-color: #84A59D;
+}
+#five {
+  transform: rotate(.9deg);
+}
+#five .flip-card-front, #five .flip-card-back {
+  box-shadow: 10px 10px #c2869b;
+}
+#six {
+  transform: rotate(-1.2deg);
+}
+#six .flip-card-front, #six .flip-card-back {
+  box-shadow: 10px 10px #deae5f;
+}
+
+#form {
+  width: 80%;
+  font-family: 'Quicksand', sans-serif;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+#form h2 {
+  text-align: center;
+  color: #84A59D;
+  padding: 15px 0px;
+  text-shadow: 3px 3px lightgray;
+}
+
+#form input, #form textarea {
+  min-width: 320px;
+  width: 60vw;
+  max-width: 600px;
+  border: 2px solid gray;
+  background-color:gray;
+  color: white;
+}
+
+footer {
+  height: 250px;
+  padding-bottom: 0px;
+  background-color: #84A59D;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 1.2em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  margin-left:10px;
+  margin-right: 10px;
+}
+
+.icon:hover {
+  transform:rotate(8deg);
+}
+
+#form button {
+  background-color: #84A59D;
+  border: none;
+  border-radius: 2px;
+  padding: 8px;
+  box-shadow: 5px 5px gray;
+}
+
+#form button:hover {
+  transform: rotate(-8deg);
+}
+
