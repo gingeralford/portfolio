@@ -23,6 +23,7 @@ body {
   background-color: #f2f2f0;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 .anchor {
@@ -32,9 +33,9 @@ body {
 #customNav {
   background-color: #f2f2f0;
   font-family: 'Quicksand', sans-serif;
-  top: 0;
+  /* top: 0;
   position:fixed;
-  z-index: 2;
+  z-index: 2; */
 }
 
 #customNav a:hover {
@@ -99,8 +100,7 @@ body {
 
 #portrait img {
   width: 100%;
-  /* min-width: 200px; */
-  max-width: 350px;
+
   height: auto;
   box-shadow: 10px 10px grey;
   margin: auto;
@@ -109,6 +109,11 @@ body {
   background-color: grey;
   margin-bottom: 30px;
   
+}
+#portrait {
+  margin-right: 40px;
+    min-width: 200px;
+  max-width: 350px;
 }
 
 /* #portrait {
@@ -141,13 +146,13 @@ body {
 }
 
 hr {
-  color: #EB90B0;
+  color: gray;
   width: 60%;
   margin: auto;
   /* border-top: 5px solid #EB90B0; */
-  height: 10px;
+  height: 5px;
   /* margin-bottom: 20px; */
-  background-color: #EB90B0; 
+  background-color: gray; 
 }
 
 .container-lg {
@@ -341,6 +346,11 @@ a {
   #customNav {
     font-weight: 500;
 }
+  #portrait {
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }
   .nav-link:hover {
     background-color: lightgray;
   }
